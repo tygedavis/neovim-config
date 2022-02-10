@@ -38,6 +38,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'folke/todo-comments.nvim'
  Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
  Plug 'akinsho/bufferline.nvim'
+ Plug 'akinsho/toggleterm.nvim'
 call plug#end()
 
 colorscheme nord
@@ -56,4 +57,8 @@ lua << EOF
       -- https://github.com/folke/todo-comments.nvim
   }
   require("bufferline").setup{}
+  require("toggleterm").setup{
+    open_mapping = [[<c-t>]],
+    size = 40
+  }
 EOF
